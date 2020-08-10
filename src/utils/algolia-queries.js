@@ -36,7 +36,8 @@ const queries = [
   {
     query: postsQuery,
     transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: `Post`, 
+    indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+    //indexName: `Post`, 
     settings,
   },
 ]
