@@ -10,7 +10,9 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
   return(
     <S.PaginationWrapper>
       {!isFirst &&
-        <AniLink cover direction="left" bg={getThemeColor()} duration={0.6} to={prevPage}>← página anterior</AniLink>
+        <AniLink cover direction="left" bg={getThemeColor()} duration={0.6} to={prevPage}>
+          ← página anterior
+        </AniLink>
       }
 
       <p>
@@ -18,7 +20,9 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
       </p>
 
       {!isLast &&
-        <AniLink cover direction="right" bg={getThemeColor()} duration={0.6} to={nextPage}>proxima página →</AniLink>
+        <AniLink cover direction="right" bg={getThemeColor()} duration={0.6} to={nextPage}>
+          proxima página →
+        </AniLink>
       }
     </S.PaginationWrapper>
   )

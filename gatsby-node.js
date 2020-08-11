@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
           frontmatter {
             background
             category
-            date(formatString: "DD [de] MMM [de] YYYY", locale: "pt-br")
+            date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
             description
             title
             image
@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: node.fields.slug,
           previousPost: next,
-          nextPost: previous
+          nextPost: previous,
         },
       })
     })
@@ -84,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * postsPerPage,
           numPages,
           currentPage: index + 1
-        }
+        },
       })
     })
   })

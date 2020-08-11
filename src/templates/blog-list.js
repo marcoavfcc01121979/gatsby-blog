@@ -25,7 +25,7 @@ const BlogList = props => {
           background, category, date, description, title
         },
           timeToRead,
-          fields: { slug }
+          fields: { slug },
         },
         }) => (
           <PostItem

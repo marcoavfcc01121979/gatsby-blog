@@ -1,0 +1,62 @@
+backend: 
+  name: github
+  repo: marcoavfcc01121979/gatsby-blog
+  branch: master
+  site_domain: https://5f30bf41745fca0008c4d770--marcoveloso.netlify.app/ 
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "select",
+        options: ["css", 
+          "js", 
+          "html", 
+          "dev", 
+          "misc", 
+          "node", 
+          "git", 
+          "react", 
+          "react-native",
+          "blog",
+          "ecommerce"
+        ]
+      }
+      - {
+        label: "Background",
+        name: "background",
+        widget: "select",
+        options: [
+          { label: 'CSS', value: '#2DA0C3' },
+          { label: 'JS', value: '#D6BA32' },
+          { label: 'HTML', value: '#EB7728' },
+          { label: 'DEV', value: '#7D669E' },
+          { label: 'MISC', value: '#637a91' },
+          { label: 'NODE', value: '#7AAB13' },
+          { label: 'GIT', value: '#B31917' },
+          { label: 'REACT', value: '#33FF66' },
+          { label: 'REACT-NATIVE', value: '#00CC00S' },
+          { label: 'BLOG', value: '#E8E8E8' },
+          { label: 'ECOMMERCE', value: '#D3D3D3' },
+        ]
+      }
+      - { label: "Body", name: "body", widget: "markdown" }
