@@ -6,8 +6,6 @@ thumbnail: assets/img/blog-pessoal.png
 category: blog
 background: "#E8E8E8"
 ---
-
-
 \
 **Um trabalho ficou muito bonito com paginação, Light e Dark Mode e muito mais.**
 
@@ -20,3 +18,5 @@ background: "#E8E8E8"
 7. Deploy finalizado App com netlify e gatsby cloud.
 8. ES6+ conceitos e sintaxe
 9. Gatsby Browser API e Gatsby Node API.
+
+   ![Pagina principal](assets/img/blog-pessoal.png "Blog Pessoal")
